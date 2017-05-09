@@ -7,4 +7,6 @@ MSG=$2
 if [[ "X${MSG}" == "X" ]];then
   MSG="My message is $(date)"
 fi
-echo "cee{\"msg\":\"${MSG}\", \"event_code\":\"${EVENT_CODE}\"}" |nc ${HOST} ${PORT}
+msg="@cee{\"msg\":\"${MSG}\", \"event_code\":\"${EVENT_CODE}\"}"
+echo "Send: $msg"
+echo $msg |nc ${HOST} ${PORT}
