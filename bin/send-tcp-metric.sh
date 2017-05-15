@@ -3,7 +3,8 @@
 HOST=${HOST:-172.17.0.2}
 PORT=${PORT:-11001}
 NAME=${1:-testmetric}
-if [[ "X${2}" == "X" ]];then
+VALUE=${2}
+if [[ "X${VALUE}" == "X" ]];then
   VALUE=${RANDOM}
 fi
 
