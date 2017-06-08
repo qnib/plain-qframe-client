@@ -1,5 +1,7 @@
 #!/bin/bash
 
+trap exit INT
+
 DELAY=${DELAY:-2}
 LOG_LEVEL=${2:-INFO}
 CNT=${1:-5}
